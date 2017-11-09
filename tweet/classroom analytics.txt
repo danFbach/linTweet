@@ -1,0 +1,45 @@
+classroom analytics
+realtime online skills survey, each student has a login, can check off subjects/requirements as they are completed OR
+weekly/biweekly unit surveys given online to see overall classes progress
+surveys are compiled into graphical data for teachers to view
+student rank
+
+student data:
+	assignment, project and test grades, grades weighted
+	attendance
+	participation
+	student grade progression throughout course -on timeline based graph
+	real-time OR single-event progress survey
+
+student:
+	student can view their grades
+	student can view assignment grades on timeline
+	student can view and assignment grade against the grades of other students--anonymously
+	student can view their GPA on a timeline
+	student can view and fill out the current section/unit progress survey
+
+teacher:
+	**access to all data views
+	add, edit, view remove students
+	add, edit student grade data -personal notes can be left about the assignments grade
+	add sections --class id associated with new section, but section does not HOLD class data
+	add units to sections
+	units and sections can hold notes about class progress, and other unit/section notes
+
+
+views of data:
+	class data:
+		timeline graphs: --line graph
+			student grades
+			classroom average grades
+			overlay data of previous class to compare progress
+
+		scatter plot:
+			individual student grades on individual assignment
+			individual student grade averages
+			assignment averages -multiple assignments on the plot
+
+
+
+		organization of survey and grade data by subject/unit
+		overall grade comparisons, track class progression throughout course -on timeline based graph

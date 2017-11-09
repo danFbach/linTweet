@@ -1,0 +1,146 @@
+//NOTES::
+	FIX GRADEBOOK EDIT
+
+
+
+
+classroom analytics
+realtime online skills survey, each student has a login, can check off subjects/requirements as they are completed OR
+weekly/biweekly unit surveys given online to see overall classes progress
+surveys are compiled into graphical data for teachers to view
+student rank
+
+~ = normal data based view
+* = gui/graphical representation of data view
+e
+student data:
+	assignment, project and test grades, grades weighted ~
+	attendance ~
+	participation ~
+	student grade progression throughout course -on timeline based graph *
+	real-time OR single-event progress survey ~
+
+student:
+	student can view their grades ~
+	student can view assignment grades on timeline *
+	student can view and assignment grade against the class average *
+	student can view their GPA on a timeline *
+	student can fill out the current section/unit progress survey ~
+	student can view current section/unit progress survey *
+
+teacher:
+	access to all data views ~
+	add, edit, view remove students ~
+	add, edit student grade data -personal notes can be left about the assignments grade ~
+	add sections --class id associated with new section, but section does not HOLD class data ~
+	add units to sections ~
+	units and sections can hold notes about class progress, and other unit/section notes ~
+
+surveys:
+
+	contents:
+		a "Real Time" class survey will be a survey open during the entirity of the section, unit, project. ~
+		the survey will consist of check boxes that will relate to "check points" for the current assignment / section etc... ~
+		"real time" survey data will be available to teachers to monitor class progress as they are updated in order to dynamically shape the direction or the current task. ~*
+		Survey's will be generated dynamically by the teacher on an as needed basis and will be saved for potential later use. ~
+		------------
+		"single instance" survey will be given to students at a certain point during the current task, will be completed and submitted the same day so that the teacher can see overall class progress and adjust the direction of the task accordingly. ~*
+		this type of survey can also be given after a task in order to see student stats..i.e. energy, moral, confidence, knowledge. ~*
+		can be given before a "study session" so that the instructor knows what to review ~*
+	views:
+		surveys can be viewed in a line graph, showing where the class is weak and where they are strong *
+		individual survey entries viewed by instructors?? or do we keep anonymous? ~*
+
+	creation:
+		instructors will be given a form in which they can create a series of yes/no questions ~
+		also will be given the option to add a comment box ~
+
+
+views of data:
+	class data:
+		timeline graphs: --line graph ***
+			student grades ***
+			classroom average grades ***
+			overlay data of previous class to compare progress ***
+
+		scatter plot:
+			individual student grades on individual assignment ***
+			individual student grade averages ***
+			assignment averages -multiple assignments on the plot **
+
+
+
+		organization of survey and grade data by subject/unit
+		overall grade comparisons, track class progression throughout course -on timeline based graph
+
+
+PROJECTED TIMELINE FOR COMPLETION:
+
+	WEEK 1:
+		Launch ASP.Net project, begin building all models, then...
+		Databases:
+			## build models first.
+			Build semester database: Semester => Sections => Units => Assignments/Projects/Tests => Grades
+			Build Class database: Class => Students
+			Build Survey database: Surverys => Survey template/prototype
+											=> Real surveys => survey stats
+			Build Teacher database? or just make a people db for both students and staff
+		Views:
+			Admin/Teacher Views:
+				Stub out views for Account Creation and modification
+				Stub out views for critical pages. --- semester/section/etc.. | class/student/etc.. --- creation and modification pages
+				Stub out views for survey create and modification
+				Views for raw data 
+				Views for gui graphs etc.. -no graphs or api's applied yet, week 2
+			Student Views:
+				View raw grade data, user appropriate
+				Views for graphical representation --not yet implement api
+				Views for survey entry
+				Views for Section Plan/Sylabus? ---Maybe on google calender api??
+
+	WEEK 2:
+		API/Graphical Data representation:
+			Begin to work with microsoft azure data analytics OR Google Charts.
+			on dynamic pages, organize data, decide how to represent each group best to make it the most usable.
+			begin to implement these methods into all pages requiring graphical data.
+
+	WEEK 1: 
+		MON:
+			AM:
+			- Launch New ASP.Net project.
+			- draw out db structure visually
+			PM:
+			- write out models for db structure
+		TUE:
+			AM:
+			- when models are complete for all parts of database, build db Assign FK relationships
+			- finish db creation, FK relations and testing db
+			PM:
+			- once db is solid, implement default controller and default view package
+			- start building out views(create, edit..etc)...proposed order => Accounts => Semesters(and all contained, section, unit) => classes/students => Surveys
+		WED:
+			AM:
+			- Finish building out default views
+			PM:
+			- Views for Student to fill in active survey
+		THU:
+			AM:
+			- Views for Student and Instructor access to raw grade data
+			PM:
+			- GUI (graph) views associated with raw data
+		FRI:
+			AM:
+			- GOOGLE Calender api for syllabus
+
+Feature List:
+	- Grade Book, staff can add grades
+	- Grade Book (table) viewable by staff, standard grade book style. | students can view their own grades in this format as well.
+	- View Grades and Averages over Timeline Line Chart (viewable by staff and students)
+	- Timelines can be overlayed by other classes GPAS
+	- Create and Deploy Surveys
+	- Create Sections to be taught - (ex. languages, added to google calender)
+	- Sections contain units, when sections are created/used, notes can be left by instructor for future instruction (ex. OOP, functional, section broken into small pieces)
+	- Units Contain Assignments, Projects, Tests, will contain a notes area for instructors.
+	- Graded Tasks will be viewable by section in a line chart(averaged, available to staff and students), or as one assignment with grades on scatter chart(individual,available only to staff)
+	- View survey data, Raw as well as In graphical chart where students answers will be averaged and placed in a line chart, pointing out where there are problems areas (viewable by staff)
+	- Implement Google Calender for students to view lesson plan, staff can view and modify

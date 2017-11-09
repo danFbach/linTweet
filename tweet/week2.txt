@@ -1,0 +1,10 @@
+WEEK 2 features:
+	clean up, remove any pages load errors or other in-site errors
+		
+	make sure that all features work in a way that was promised
+	
+	polish up UI, removing any default text, Any typos, etc.
+
+	Once the UI is really clean and no errors are found, adding more data representations
+
+	Email notifications, message your teacher page implemented using SendGrid API
